@@ -1,9 +1,9 @@
 @font-face {
-  font-family: "BIZ UDGothic";
+  font-family: "BIZ UDPGothic";
   src:
-      local("BIZ UDGothic Regular"),
-      local("BIZUDGothic-Regular"),
-      url(/BIZUDGothic-Regular.woff2) format("woff2");
+      local("BIZ UDPGothic Regular"),
+      local("BIZUDPGothic-Regular"),
+      url(/BIZUDPGothic-Regular.woff2) format("woff2");
   font-style: normal;
   font-display: swap;
 }
@@ -11,6 +11,7 @@ body {
   margin: 0;
   padding: 0;
   background: linear-gradient(135deg, #0a1428, #1e3a8a);
+  font-family: "BIZ UDPGothic", "BIZ UDPゴシック";
   height: 100vh;
   display: flex;
   align-items: center;
