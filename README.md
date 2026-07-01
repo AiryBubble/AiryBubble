@@ -25,4 +25,4 @@
 '                                                         　　  　                        '
 ```
 ---
-<a href="https://www.tokumei24.jp"><img src="https://www.tokumei24.jp/system/xbimages/tok/images/user/banner@2x.png.webp" alt="見過ごすな！求む情報！匿名通報ダイヤル" width=300px height=250px></img></a>
+<a href="https://www.tokumei24.jp"><img src="https://github.com/user-attachments/assets/54bc104a-5134-4221-a566-97d1cf4e543f" alt="見過ごすな！求む情報！匿名通報ダイヤル" width=300px height=250px></img></a>
