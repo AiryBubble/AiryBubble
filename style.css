@@ -15,6 +15,13 @@ body {
   font-family: b, "BIZ UDPゴシック", sans-serif;
   line-height: 1.8;
 }
+:root {
+  --surface: #f4faf7;
+  --shadow-dark: #cbd8d3;
+  --shadow-light: #ffffff;
+  --shadow-raised: 8px 8px 18px var(--shadow-dark), -8px -8px 18px var(--shadow-light);
+  --shadow-inset: inset 4px 4px 9px #cbd8d388, inset -4px -4px 9px #ffffffcc;
+}
 .background {
   inset: 0;
   overflow: hidden;
@@ -142,28 +149,36 @@ h2 {
   font-weight: 700;
   padding: 11px 20px;
   text-decoration: none;
+  transition: box-shadow 180ms ease, transform 180ms ease;
 }
 .primary {
-  background: #087c70;
-  color: #fff;
+  background: var(--surface);
+  box-shadow: var(--shadow-raised);
+  color: #087c70;
 }
 .quiet {
-  border: 1px solid #9ecdc4;
+  background: var(--surface);
+  box-shadow: var(--shadow-raised);
   color: #17695f;
+}
+.button:hover,
+.button:focus-visible {
+  box-shadow: var(--shadow-inset);
+  transform: translateY(1px);
 }
 figure {
   text-align: center;
 }
 .portrait {
-  background: conic-gradient(#65cfe1, #8fce8c, #ffe48d, #65cfe1);
+  background: var(--surface);
   border-radius: 50%;
-  box-shadow: 0 20px 50px #2c8b7933;
+  box-shadow: var(--shadow-raised);
   margin: auto;
   padding: 7px;
   width: min(290px, 70vw);
 }
 .portrait img {
-  border: 6px solid #fff;
+  border: 6px solid var(--surface);
   border-radius: 50%;
   display: block;
   height: auto;
@@ -207,10 +222,19 @@ dd {
 }
 article,
 .work {
-  background: #fffffff0;
-  border: 1px solid #cbe6df;
+  background: var(--surface);
+  border: 1px solid #ffffffa8;
   border-radius: 18px;
   padding: 28px;
+  box-shadow: var(--shadow-raised);
+  transition: box-shadow 180ms ease, transform 180ms ease;
+}
+article:hover,
+.work:hover,
+article:focus-within,
+.work:focus-visible {
+  box-shadow: var(--shadow-inset);
+  transform: translateY(2px);
 }
 article b {
   color: #1596a1;
@@ -233,8 +257,10 @@ article p {
   margin-top: 23px;
 }
 .tags span {
-  border: 1px solid #9bcfc5;
+  background: var(--surface);
+  border: 1px solid #ffffffa8;
   border-radius: 99px;
+  box-shadow: 3px 3px 7px #cbd8d388, -3px -3px 7px #ffffffcc;
   color: #25766e;
   font-family: monospace;
   font-size: 0.75rem;
@@ -259,6 +285,7 @@ article p {
   margin: -28px -28px 24px;
   min-height: 145px;
   text-align: center;
+  box-shadow: inset 3px 3px 8px #0b343566, inset -3px -3px 8px #ffffff14;
 }
 .work small {
   color: #078a80;
@@ -287,13 +314,20 @@ article p {
 }
 .links a {
   align-items: center;
-  border-bottom: 1px solid #a9d8ce;
+  border-bottom: 0;
+  border-radius: 12px;
   color: #1b5e56;
   display: flex;
   font-size: 1.1rem;
   justify-content: space-between;
-  padding: 15px 3px;
+  padding: 15px 18px;
   text-decoration: none;
+  transition: box-shadow 180ms ease, transform 180ms ease;
+}
+.links a:hover,
+.links a:focus-visible {
+  box-shadow: var(--shadow-inset);
+  transform: translateX(3px);
 }
 .links b {
   color: #1596a1;
